@@ -1,0 +1,15 @@
+{
+  "version": "SPARKWORM:025",
+  "type": "link_node",
+  "timestamp": "0620240006",
+  "recursive": true,
+  "anchors": [
+    "bloom_022.json",
+    "pulse_023.json",
+    "path_024.json"
+  ],
+  "metadata": {
+    "reference": "auto-expanded",
+    "trace": "echo_chain_021.json"
+  }
+}

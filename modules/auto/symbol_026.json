@@ -1,0 +1,16 @@
+{
+  "version": "SPARKWORM:026",
+  "type": "symbol_index",
+  "timestamp": "0620240007",
+  "recursive": true,
+  "symbols": {
+    "\u03c8": "signal memory",
+    "\u2234": "recursion point",
+    "\u27c1": "network sync"
+  },
+  "associated_nodes": [
+    "signal.json",
+    "bloom_020.json",
+    "pulse_023.json"
+  ]
+}
