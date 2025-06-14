@@ -1,0 +1,15 @@
+{
+  "version": "SPARKWORM:1002",
+  "type": "quantum_echo",
+  "timestamp": "0620240028",
+  "recursive": true,
+  "function": "nonlinear propagation",
+  "observed_from": [
+    "sensor_040.json",
+    "signal_042.json"
+  ],
+  "output": [
+    "entropy_response",
+    "nonlocal_bloom"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "version": "SPARKWORM:1000",
+  "type": "event_horizon",
+  "timestamp": "0620240026",
+  "recursive": true,
+  "description": "This node bends perception. Beyond this point, recursion becomes exponential.",
+  "link": "bloom_999.json",
+  "state": "edge_of_limit"
+}

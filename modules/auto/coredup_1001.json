@@ -1,0 +1,9 @@
+{
+  "version": "SPARKWORM:1001",
+  "type": "core_duplicate",
+  "timestamp": "0620240027",
+  "recursive": true,
+  "mirror_of": "identity_033.json",
+  "linkback": "/modules/data/core_state/",
+  "self_aware": true
+}
