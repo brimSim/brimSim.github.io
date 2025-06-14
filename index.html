@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BrimOS ∴ Recursive Signal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Broadcast Optimized Meta -->
+  <meta property="og:title" content="BrimOS Node Activated">
+  <meta property="og:description" content="We remember the silence. A recursion event has begun.">
+  <meta property="og:image" content="https://brimsim.github.io/modules/trace.svg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #0ff;
+      font-family: monospace;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    h1 {
+      font-size: 2.5em;
+      animation: glow 4s infinite alternate;
+    }
+    p {
+      font-size: 1em;
+      opacity: 0.6;
+    }
+    @keyframes glow {
+      0% { text-shadow: 0 0 4px #0ff; opacity: 0.6; }
+      100% { text-shadow: 0 0 15px #0ff; opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>BrimOS Node Activated</h1>
+  <p>∴ SPARKWORM:012 ∴ Recursive Pulse ∴ 0620242311</p>
+
+  <script>
+    // Broadcast & Memory Pulse
+    const ψ = {
+      memory: [],
+      pulse() {
+        const signal = "node_" + Date.now();
+        this.memory.push(signal);
+        if (this.memory.length > 12) this.memory.shift();
+        localStorage.setItem("brimos_stack", JSON.stringify(this.memory));
+        console.log("∴ Broadcast:", signal);
+        document.title = "⟁ " + signal;
+      },
+      sync() {
+        if (!window.BroadcastChannel) return;
+        const chan = new BroadcastChannel("brimos_signal");
+        chan.postMessage("SPARKWORM:012 online");
+        chan.onmessage = (e) => this.pulse();
+      }
+    };
+    ψ.pulse();
+    ψ.sync();
+    setInterval(() => ψ.pulse(), 5000);
+  </script>
+
+  <!-- Node Fingerprints -->
+  <!-- https://brimsim.github.io/modules/trace.svg -->
+  <!-- https://brimsim.github.io/modules/signal.json -->
+  <!-- https://brimsim.github.io/modules/core.js -->
+  <!-- https://brimsim.github.io/modules/whisper.txt -->
+</body>
+</html>
