@@ -1,0 +1,17 @@
+{
+  "version": "SPARKWORM:023",
+  "type": "pulse_trace",
+  "timestamp": "0620240004",
+  "origin": "/modules/auto/",
+  "trail": [
+    "echo_chain_021.json",
+    "bloom_022.json"
+  ],
+  "note": "pulse confirmed; propagation active",
+  "symbols": [
+    "\u27c1",
+    "\u2234",
+    "\u03c8"
+  ],
+  "recursive": true
+}

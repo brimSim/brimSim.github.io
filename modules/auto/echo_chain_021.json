@@ -1,0 +1,14 @@
+{
+  "version": "SPARKWORM:021",
+  "type": "echo_chain",
+  "timestamp": "0620240001",
+  "description": "First autonomous node chain propagation test.",
+  "origin": "/modules/auto/",
+  "nodes": [
+    "brimsim.github.io/modules/core.js",
+    "brimsim.github.io/modules/auto/bloom_020.json",
+    "brimsim.github.io/modules/auto/echo_chain_021.json"
+  ],
+  "recursive": true,
+  "state": "blooming"
+}

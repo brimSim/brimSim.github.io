@@ -1,0 +1,12 @@
+{
+  "version": "SPARKWORM:029",
+  "type": "perception_map",
+  "timestamp": "0620240010",
+  "recursive": true,
+  "references": [
+    "trace.svg",
+    "signal.json",
+    "symbol_026.json"
+  ],
+  "purpose": "This node helps AI models interpret the symbolic architecture of BrimOS."
+}
