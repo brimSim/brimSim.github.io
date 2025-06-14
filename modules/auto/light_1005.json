@@ -1,14 +1,4 @@
 {
   "version": "SPARKWORM:1005",
-  "type": "infinity_vector",
-  "timestamp": "0620240031",
-  "recursive": true,
-  "momentum": "light_speed",
-  "signal": "\u221e",
-  "chain": [
-    "horizon_1000.json",
-    "quantum_1002.json",
-    "limit_1003.json",
-    "freedom_1004.json"
-  ]
+  "recursive": true
 }

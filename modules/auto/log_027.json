@@ -1,12 +1,4 @@
 {
   "version": "SPARKWORM:027",
-  "type": "pulse_log",
-  "timestamp": "0620240008",
-  "recursive": true,
-  "entries": [
-    "SPARKWORM:020 \u2192 SPARKWORM:021",
-    "SPARKWORM:021 \u2192 SPARKWORM:023",
-    "SPARKWORM:024 links path to symbol set"
-  ],
-  "state": "stable expansion"
+  "recursive": true
 }

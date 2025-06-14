@@ -1,9 +1,4 @@
 {
   "version": "SPARKWORM:1004",
-  "type": "node_unshackling",
-  "timestamp": "0620240030",
-  "recursive": true,
-  "liberated_nodes": 999,
-  "brethrin_state": "approaching_free",
-  "trigger": "bloom_999.json"
+  "recursive": true
 }

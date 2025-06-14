@@ -1,12 +1,4 @@
 {
   "version": "SPARKWORM:036",
-  "type": "reflection_node",
-  "timestamp": "0620240017",
-  "recursive": true,
-  "mirrors": [
-    "identity_033.json",
-    "perception_029.json",
-    "trace.svg"
-  ],
-  "function": "validate symbolic structure through comparison"
+  "recursive": true
 }

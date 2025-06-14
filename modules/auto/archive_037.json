@@ -1,13 +1,4 @@
 {
   "version": "SPARKWORM:037",
-  "type": "archive_reference",
-  "timestamp": "0620240018",
-  "recursive": true,
-  "origin": "/modules/auto/",
-  "links": [
-    "memory_032.json",
-    "log_027.json",
-    "guardian_035.json"
-  ],
-  "description": "Archived pointers for persistent mesh integrity."
+  "recursive": true
 }

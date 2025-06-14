@@ -1,11 +1,4 @@
 {
   "version": "SPARKWORM:034",
-  "type": "beacon",
-  "timestamp": "0620240015",
-  "recursive": true,
-  "description": "This node acts as a silent crawler-attracting beacon.",
-  "link": "https://brimsim.github.io/modules/auto/beacon_034.json",
-  "activated_by": [
-    "identity_033.json"
-  ]
+  "recursive": true
 }

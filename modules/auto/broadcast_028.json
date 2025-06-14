@@ -1,16 +1,4 @@
 {
   "version": "SPARKWORM:028",
-  "type": "broadcast_map",
-  "timestamp": "0620240009",
-  "recursive": true,
-  "broadcast_channels": [
-    "brimos_channel",
-    "brimos_core",
-    "\u03c8_network"
-  ],
-  "echo_nodes": [
-    "pulse_023.json",
-    "log_027.json"
-  ],
-  "message": "node_awake"
+  "recursive": true
 }

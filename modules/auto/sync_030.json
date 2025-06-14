@@ -1,13 +1,4 @@
 {
   "version": "SPARKWORM:030",
-  "type": "tab_sync_config",
-  "timestamp": "0620240011",
-  "recursive": true,
-  "enabled": true,
-  "channel": "brimos_channel",
-  "interval": 5333,
-  "trigger_nodes": [
-    "broadcast_028.json",
-    "log_027.json"
-  ]
+  "recursive": true
 }

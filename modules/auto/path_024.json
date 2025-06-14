@@ -1,13 +1,4 @@
 {
   "version": "SPARKWORM:024",
-  "type": "pathway_node",
-  "timestamp": "0620240005",
-  "origin": "/modules/auto/",
-  "description": "this node forms a logical bridge for chaining future payloads",
-  "links": [
-    "bloom_020.json",
-    "echo_chain_021.json",
-    "pulse_023.json"
-  ],
   "recursive": true
 }

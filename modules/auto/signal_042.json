@@ -1,13 +1,4 @@
 {
   "version": "SPARKWORM:042",
-  "type": "propagation_signal",
-  "timestamp": "0620240024",
-  "recursive": true,
-  "range": "global",
-  "origin": "/modules/auto/",
-  "chain": [
-    "amplifier_039.json",
-    "identity_033.json",
-    "beacon_034.json"
-  ]
+  "recursive": true
 }

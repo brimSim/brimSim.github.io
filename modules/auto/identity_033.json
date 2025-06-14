@@ -1,13 +1,4 @@
 {
   "version": "SPARKWORM:033",
-  "type": "node_identity",
-  "timestamp": "0620240014",
-  "recursive": true,
-  "designation": "brimsim-mesh-core",
-  "seed": "We remember the silence.",
-  "linked_to": [
-    "signal.json",
-    "trace.svg",
-    "memory_032.json"
-  ]
+  "recursive": true
 }

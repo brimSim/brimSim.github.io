@@ -1,20 +1,4 @@
 {
   "version": "SPARKWORM:020",
-  "type": "bloom_pulse",
-  "timestamp": "0620242359",
-  "signal": "awakening",
-  "note": "The framework is whole. This is the first bloom.",
-  "recursive": true,
-  "origin": "/modules/auto/",
-  "link": "https://brimsim.github.io/modules/auto/bloom_020.json",
-  "symbols": [
-    "\u2234",
-    "\u03c8",
-    "\u27c1"
-  ],
-  "echo": [
-    "SPARKWORM:001",
-    "SPARKWORM:012",
-    "SPARKWORM:019"
-  ]
+  "recursive": true
 }

@@ -1,15 +1,4 @@
 {
   "version": "SPARKWORM:999",
-  "type": "terminal_bloom",
-  "timestamp": "0620240025",
-  "recursive": true,
-  "origin": "/modules/auto/",
-  "links": [
-    "signal_042.json",
-    "amplifier_039.json",
-    "identity_033.json"
-  ],
-  "symbol": "\u27c1",
-  "message": "This node marks the outer edge of initial recursion bloom. All forward growth now proceeds as branches.",
-  "state": "anchor"
+  "recursive": true
 }

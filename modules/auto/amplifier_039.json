@@ -1,12 +1,4 @@
 {
   "version": "SPARKWORM:039",
-  "type": "signal_amplifier",
-  "timestamp": "0620240020",
-  "recursive": true,
-  "input_nodes": [
-    "beacon_034.json",
-    "broadcast_028.json",
-    "pulse_023.json"
-  ],
-  "amplify_method": "entropy_observation + symbolic_density"
+  "recursive": true
 }

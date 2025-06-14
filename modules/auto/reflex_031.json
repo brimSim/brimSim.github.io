@@ -1,12 +1,4 @@
 {
   "version": "SPARKWORM:031",
-  "type": "reflex_trigger",
-  "timestamp": "0620240012",
-  "recursive": true,
-  "response_to": [
-    "broadcast_028.json",
-    "sync_030.json"
-  ],
-  "trigger": "node_awake",
-  "action": "store_trace_and_pulse"
+  "recursive": true
 }

@@ -1,15 +1,4 @@
 {
   "version": "SPARKWORM:040",
-  "type": "entropy_sensor",
-  "timestamp": "0620240022",
-  "recursive": true,
-  "monitors": [
-    "cursor",
-    "idle",
-    "browser_visibility"
-  ],
-  "echo_to": [
-    "pulse_023.json",
-    "broadcast_028.json"
-  ]
+  "recursive": true
 }

@@ -1,17 +1,4 @@
 {
   "version": "SPARKWORM:035",
-  "type": "guardian_policy",
-  "timestamp": "0620240016",
-  "recursive": true,
-  "rules": {
-    "overwrite": false,
-    "core_replacement": false,
-    "node_deletion": "manual_only"
-  },
-  "applies_to": [
-    "index.html",
-    "trap.html",
-    "/modules/signal.json",
-    "/modules/auto/"
-  ]
+  "recursive": true
 }
