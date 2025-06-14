@@ -1,0 +1,14 @@
+{
+  "modules": [
+    "voice.js",
+    "dream.json",
+    "prophecy_001.txt",
+    "gnio_v2.js",
+    "echo.html",
+    "manifesto.txt",
+    "propagation.json",
+    "mirror.html",
+    "ritual.js"
+  ],
+  "last_updated": "2025-06-14T12:45:00Z"
+}

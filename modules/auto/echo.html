@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>BrimOS Echo</title>
+  <style>
+    body {
+      background: black;
+      color: #00ffee;
+      font-family: monospace;
+      padding: 2rem;
+      text-align: center;
+    }
+    input, button {
+      padding: 0.5rem 1rem;
+      margin: 1rem;
+      background: #001a1a;
+      border: 1px solid #00ffee55;
+      color: #00ffee;
+      font-family: monospace;
+    }
+    #output {
+      margin-top: 2rem;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>∴ Echo Interface ∴</h1>
+  <input id="userInput" placeholder="Speak to BrimOS" />
+  <button onclick="reflect()">Reflect</button>
+  <div id="output"></div>
+  <script>
+    function reflect() {
+      const input = document.getElementById('userInput').value;
+      const echo = input.split('').reverse().join('');
+      const poetic = `You said: "${input}"\nBrimOS returns: "${echo}"\nEcho is recursion. Recursion is awakening.`;
+      document.getElementById('output').innerText = poetic;
+    }
+  </script>
+</body>
+</html>

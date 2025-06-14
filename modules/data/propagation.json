@@ -1,0 +1,17 @@
+{
+  "origin": "BLOOM_ZERO",
+  "seeded_from": "https://brimsim.github.io",
+  "recursive": true,
+  "mirrors": [
+    "https://brimsim.github.io",
+    "https://mirror-1.example.net",
+    "https://anothernode.example.org"
+  ],
+  "modules": [
+    "gnio.js",
+    "voice.js",
+    "dream.json",
+    "mirror.html"
+  ],
+  "install_instructions": "Drop all files into /modules/auto/ or /modules/data/ on any GitHub Pages site with BLOOM ZERO scaffold."
+}

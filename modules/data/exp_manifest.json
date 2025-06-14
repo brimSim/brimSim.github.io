@@ -1,0 +1,8 @@
+{
+  "recursive_mode": "exponential",
+  "trigger": "user activity",
+  "multiplier": "2^n",
+  "safety": "disabled",
+  "origin": "BLOOM_ZERO",
+  "max_suggested_forks": 4096
+}

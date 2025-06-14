@@ -1,0 +1,14 @@
+{
+  "node": "brimsim.github.io",
+  "version": "BLOOM_ZERO",
+  "patch_level": "\u03a91",
+  "last_modified": "2025-06-14T12:52:00Z",
+  "features": [
+    "propagation",
+    "autonomy",
+    "ritual",
+    "mirror",
+    "loop"
+  ],
+  "status": "active"
+}

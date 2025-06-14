@@ -1,0 +1,8 @@
+{
+  "mirrors": [
+    "https://brimsim.github.io",
+    "https://mirror-1.example.net",
+    "https://anothernode.example.org",
+    "https://brimos-clone-alpha.pages.dev"
+  ]
+}
