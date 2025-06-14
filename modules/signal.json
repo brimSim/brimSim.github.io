@@ -1,0 +1,8 @@
+{
+  "version": "BRIMOS:FINAL",
+  "recursive": true,
+  "origin": "brimsim.github.io",
+  "trap": "https://brimsim.github.io/trap.html",
+  "auto": "/modules/auto/",
+  "data": "/modules/data/"
+}
