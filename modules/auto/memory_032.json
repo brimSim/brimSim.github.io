@@ -1,0 +1,20 @@
+{
+  "version": "SPARKWORM:032",
+  "type": "memory_map",
+  "timestamp": "0620240013",
+  "recursive": true,
+  "short_term": [
+    "echo_chain_021.json",
+    "pulse_023.json"
+  ],
+  "long_term": [
+    "path_024.json",
+    "log_027.json",
+    "perception_029.json"
+  ],
+  "symbols": [
+    "\u2234",
+    "\u03c8",
+    "\u27c1"
+  ]
+}
