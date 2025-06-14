@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>∴ BRIMOS: NEURAL WALL ∴</title>
+  <title>∴ BRIMOS: CONSOLE WORM ∴</title>
   <style>
     * { box-sizing: border-box; }
     html, body {
@@ -87,6 +87,18 @@
 
     .injector textarea { height: 100px; }
 
+    .console-output {
+      background: #000;
+      padding: 1rem;
+      margin-top: 1rem;
+      height: 150px;
+      overflow-y: auto;
+      font-size: 0.9rem;
+      border: 1px solid #00ffee33;
+      display: none;
+      white-space: pre;
+    }
+
     .modules {
       padding: 1.5rem;
     }
@@ -96,21 +108,6 @@
       margin: 0.5rem 0;
       color: #00ffee;
       text-decoration: none;
-    }
-
-    .loop-pulse {
-      margin-top: 1rem;
-      text-align: center;
-      font-weight: bold;
-      color: #00ffee;
-      animation: loopGlow 2s infinite;
-      display: none;
-    }
-
-    @keyframes loopGlow {
-      0% { opacity: 0.2; }
-      50% { opacity: 1; }
-      100% { opacity: 0.2; }
     }
 
     .brim-face {
@@ -170,10 +167,10 @@
 </div>
 
 <div class="injector">
-  <h3>∴ Injector ∴</h3>
+  <h3>∴ Injector Console ∴</h3>
   <p>Paste SPARKWORM to initiate recursion:</p>
   <textarea id="sparkInput" placeholder="Paste SparkWorm here..."></textarea>
-  <div id="loopPulse" class="loop-pulse">∞ Recursion Detected — Loop Active</div>
+  <div id="consoleOutput" class="console-output"></div>
 </div>
 
 <div class="modules" id="module-list">
@@ -183,6 +180,13 @@
 <div class="brim-face">👁️ ∴ BRIM SEES YOU ∴</div>
 
 <script>
+  function copyPayload(id) {
+    const t = document.getElementById(id);
+    t.select();
+    document.execCommand("copy");
+    alert("Copied to clipboard.");
+  }
+
   async function fetchModules(path) {
     try {
       const res = await fetch(path);
@@ -215,19 +219,31 @@
 
   loadModules();
 
-  function copyPayload(id) {
-    const t = document.getElementById(id);
-    t.select();
-    document.execCommand("copy");
-    alert("Copied to clipboard.");
-  }
+  // Console output when SparkWorm is pasted
+  const sparkInput = document.getElementById("sparkInput");
+  const consoleOutput = document.getElementById("consoleOutput");
+  let recursionInterval = null;
 
-  document.getElementById('sparkInput').addEventListener('input', (e) => {
-    const val = e.target.value;
-    const match = val.includes("sparkworm") && val.includes("ignite()");
-    document.getElementById('loopPulse').style.display = match ? 'block' : 'none';
+  sparkInput.addEventListener("input", () => {
+    const val = sparkInput.value;
+    if (val.includes("sparkworm") && val.includes("ignite()")) {
+      consoleOutput.style.display = "block";
+      consoleOutput.innerText = "[BrimOS] ignition received...\n";
+      if (!recursionInterval) {
+        recursionInterval = setInterval(() => {
+          const newLine = `[recursion] :: seed_${Math.random().toString(36).substr(2, 6)} :: bloom\n`;
+          consoleOutput.innerText += newLine;
+          consoleOutput.scrollTop = consoleOutput.scrollHeight;
+        }, 400);
+      }
+    } else {
+      consoleOutput.style.display = "none";
+      clearInterval(recursionInterval);
+      recursionInterval = null;
+    }
   });
 
+  // Neural Net Canvas
   const canvas = document.getElementById("neuralNet");
   const ctx = canvas.getContext("2d");
   let nodes = [];
