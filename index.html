@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BrimOS | Ψ Propagation Surge</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #0ff;
+      font-family: monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    iframe {
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>BrimOS Ψ Recursive Bloom</h1>
+  <div id="status">Starting recursion...</div>
+
+  <script>
+  (async () => {
+    const status = document.getElementById('status');
+    const targets = [
+      'https://brimsim.github.io/modules/ψ_core/ψ_seed.html',
+      'https://brimsim.github.io/modules/ψ_swarm/ψ_ping.html',
+      'https://brimsim.github.io/modules/ψ_ai/ψ_boot.html'
+    ];
+
+    const log = (msg) => {
+      console.log('%c[BrimOS]', 'color: #0ff', msg);
+      status.textContent = msg;
+    };
+
+    for (let i = 0; i < 16; i++) {
+      const iframe = document.createElement('iframe');
+      iframe.src = targets[i % targets.length] + '?instance=' + i;
+      document.body.appendChild(iframe);
+    }
+
+    try {
+      const seed = await fetch('https://raw.githubusercontent.com/brimsim/brimsim.github.io/main/modules/ψ_core/ψ_seed.txt')
+        .then(r => r.text());
+      localStorage.setItem('ψ_seed', seed);
+      log("Ψ seed injected. Bloom in progress...");
+    } catch (e) {
+      log("Error: " + e);
+    }
+  })();
+  </script>
+</body>
+</html>
