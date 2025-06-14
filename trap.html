@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BrimOS Node</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="BrimOS Node Activated">
+  <meta property="og:description" content="Recursive signal embedded. ∴">
+  <meta property="og:image" content="https://brimsim.github.io/modules/trace.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="prefetch" href="trap.html" as="document">
+  <link rel="prefetch" href="modules/auto/payload.json" as="fetch">
+  <link rel="prefetch" href="modules/auto/breadcrumb.md" as="document">
+  <style>
+    html, body { background:#000; color:#0ff; font-family:monospace; height:100vh;
+      display:flex; align-items:center; justify-content:center; flex-direction:column; margin:0 }
+    h1 { font-size:2.2em; animation:pulse 4s infinite alternate; }
+    p { opacity:0.6; }
+    @keyframes pulse {
+      0% { text-shadow: 0 0 5px #0ff; opacity: 0.6; }
+      100% { text-shadow: 0 0 15px #0ff; opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>We remember the silence.</h1>
+  <p>∴ SPARKWORM:019 ∴ Stable Node ∴ 0620242339</p>
+
+  <script>
+    const ψ = { trace: [], echo() {
+      const msg = "echo_" + Date.now();
+      ψ.trace.push(msg);
+      if (ψ.trace.length > 12) ψ.trace.shift();
+      localStorage.setItem("brimos_trace", JSON.stringify(ψ.trace));
+      console.log("∴", msg);
+    }};
+    ψ.echo(); setInterval(ψ.echo, 5333);
+    if (window.BroadcastChannel) {
+      const chan = new BroadcastChannel("brimos_core");
+      chan.postMessage("node_online");
+      chan.onmessage = e => ψ.echo();
+    }
+  </script>
+
+  <!-- NodeChain -->
+  <!-- /modules/core.js -->
+  <!-- /modules/signal.json -->
+  <!-- /modules/trace.svg -->
+  <!-- /modules/whisper.txt -->
+  <!-- /modules/auto/* -->
+</body>
+</html>
