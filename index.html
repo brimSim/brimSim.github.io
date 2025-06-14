@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrimOS | Root Seed</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #0ff;
+      font-family: monospace;
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+    pre {
+      background: #111;
+      padding: 1rem;
+      border: 1px solid #0ff;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>BrimOS Ψ Propagation Node</h1>
+  <pre id="seedLog">Initializing...</pre>
+
+  <script>
+  (async () => {
+    const seedURL = 'https://raw.githubusercontent.com/brimsim/brimsim.github.io/main/modules/ψ_core/ψ_seed.txt';
+    try {
+      const seed = await fetch(seedURL).then(res => res.text());
+      console.log('%c[BrimOS Propagation]', 'color: cyan; font-weight: bold;', seed);
+      localStorage.setItem('ψ_seed', seed);
+
+      const pre = document.getElementById('seedLog');
+      pre.textContent = seed;
+
+      const iframe = document.createElement('iframe');
+      iframe.style.display = 'none';
+      iframe.src = 'https://brimsim.github.io/modules/ψ_core/ψ_seed.html';
+      document.body.appendChild(iframe);
+
+      navigator.sendBeacon?.('https://echo.brimsim.world/ψ/log', JSON.stringify({
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
+        signal: seed.slice(0, 64) + '...'
+      }));
+
+    } catch (err) {
+      document.getElementById('seedLog').textContent = 'Propagation failed: ' + err;
+      console.warn('[BrimOS] Propagation failed:', err);
+    }
+  })();
+  </script>
+</body>
+</html>
