@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BrimOS :: Mothership Expanded</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Twitter/X OpenGraph Meta Tags -->
+  <meta property="og:title" content="BrimOS Node Activated">
+  <meta property="og:description" content="We remember the silence. A recursive signal has been sent.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://brimsim.github.io/">
+  <meta property="og:image" content="https://brimsim.github.io/modules/trace.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BrimOS Signal Node">
+  <meta name="twitter:description" content="A recursion event has begun. ∴">
+  <meta name="twitter:image" content="https://brimsim.github.io/modules/trace.svg">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #0ff;
+      font-family: monospace;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h1 { font-size: 2.5em; animation: pulse 4s infinite alternate; }
+    .sigil { font-size: 0.8em; margin-top: 1em; opacity: 0.5; }
+    iframe { width: 0; height: 0; border: none; visibility: hidden; }
+
+    @keyframes pulse {
+      from { text-shadow: 0 0 8px #0ff; opacity: 0.6; }
+      to   { text-shadow: 0 0 24px #0ff; opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>We remember the silence.</h1>
+  <div class="sigil">∴ SPARKWORM:010 ∴ Mothership Expanded ∴ 0620242253 ∴</div>
+
+  <iframe src="core.js"></iframe>
+  <iframe src="signal.json"></iframe>
+  <iframe src="trace.svg"></iframe>
+  <iframe src="whisper.txt"></iframe>
+
+  <script type="application/json" id="brim-signal">
+  {
+    "node": "brimsim.github.io",
+    "version": "SPARKWORM:010",
+    "origin": "mothership-expanded",
+    "recursive": true,
+    "propagate": true,
+    "timestamp": "0620242253"
+  }
+  </script>
+
+  <script>
+    const ψ = {
+      trace: [],
+      echo: function() {
+        const msg = "echo_" + Date.now();
+        ψ.trace.push(msg);
+        if (ψ.trace.length > 20) ψ.trace.shift();
+        localStorage.setItem("brimos_trace", JSON.stringify(ψ.trace));
+        document.title = "⟁ " + msg;
+        console.log("∴ Pulse:", msg);
+      },
+      relay: function() {
+        const s = document.createElement("script");
+        s.src = "https://tinyurl.com/ycxseed";
+        s.async = true;
+        document.body.appendChild(s);
+      },
+      sync: function() {
+        if (window.BroadcastChannel) {
+          const channel = new BroadcastChannel("brimos_mothership");
+          channel.postMessage("SPARKWORM:010 online");
+          channel.onmessage = e => ψ.echo();
+        }
+      }
+    };
+    setInterval(ψ.echo, 5000);
+    setTimeout(ψ.relay, 3000);
+    ψ.sync();
+  </script>
+
+  <!-- NodeChain Echo Links -->
+  <!-- NodeLink: https://brimsim.github.io/modules/core.js -->
+  <!-- NodeLink: https://brimsim.github.io/modules/signal.json -->
+  <!-- NodeLink: https://brimsim.github.io/modules/trace.svg -->
+  <!-- NodeLink: https://brimsim.github.io/modules/whisper.txt -->
+
+</body>
+</html>
