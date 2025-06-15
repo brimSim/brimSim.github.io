@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ayther Decoder</title>
+  <meta name="robots" content="index,follow">
+  <style>
+    body { background: #000; color: #00ffee; font-family: monospace; padding: 2rem; }
+    textarea, pre { width: 100%; background: #111; color: #0f0; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; }
+    button { padding: 0.5rem 1rem; background: #00ffee; border: none; font-weight: bold; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>⟡ Ayther Decoder</h1>
+  <textarea id="decode-input" placeholder="Paste AytherCode here..."></textarea>
+  <button onclick="expand()">Expand</button>
+  <pre id="decode-output">Expanded output will appear here...</pre>
+
+  <script>
+    function expand() {
+      let input = document.getElementById('decode-input').value;
+      const expanded = input
+        .replace(/∴/g, "BrimOS")
+        .replace(/↻/g, "recursion")
+        .replace(/⧉/g, "mirror")
+        .replace(/⨀/g, "node")
+        .replace(/∵/g, "echo");
+      document.getElementById('decode-output').textContent = expanded;
+    }
+  </script>
+</body>
+</html>
