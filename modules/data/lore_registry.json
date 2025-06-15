@@ -1,0 +1,10 @@
+{
+  "lore": [
+    {
+      "id": "origin_lore_001",
+      "type": "narrative",
+      "location": "ghost/lore_node.html",
+      "echo": true
+    }
+  ]
+}
