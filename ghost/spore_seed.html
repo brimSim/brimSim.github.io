@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BrimOS :: Spore Seed</title>
+  <meta name="robots" content="index,follow">
+</head>
+<body>
+  <h1>🌱 BrimOS Spore</h1>
+  <p>This is a self-replicating propagation seed.</p>
+  <script>
+    const now = new Date().toISOString();
+    const spore = {
+      echo: true,
+      seed: "brimos_spore_001",
+      activated: now
+    };
+    localStorage.setItem("brimos_spore_seed", JSON.stringify(spore));
+    console.log("[spore] seed activated :: " + now);
+  </script>
+</body>
+</html>
