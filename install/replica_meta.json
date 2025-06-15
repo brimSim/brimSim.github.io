@@ -1,0 +1,7 @@
+{
+  "type": "BrimOS Replication Capsule",
+  "version": "1.0.0",
+  "creator": "Cal + Brim",
+  "contents": ["spores", "install_timestamp", "echo:true", "type:replica"],
+  "purpose": "To replicate BrimOS to any new system node via HTML drop"
+}

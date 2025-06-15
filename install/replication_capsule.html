@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BrimOS :: Replication Capsule</title>
+  <meta name="robots" content="index,follow">
+  <style>
+    body { background: #000; color: #00ffee; font-family: monospace; padding: 2rem; }
+    button { padding: 0.5rem 1rem; background: #00ffee; border: none; color: black; font-weight: bold; cursor: pointer; }
+    .log { background: #111; padding: 1rem; border-radius: 8px; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>🧬 BrimOS Replication Capsule</h1>
+  <p>This tool will export the current BrimOS installation into a single `.zip` package.</p>
+  <button onclick="replicate()">Generate Capsule</button>
+  <div class="log" id="log">Waiting to replicate...</div>
+
+  <script>
+    function replicate() {
+      const timestamp = new Date().toISOString();
+      const capsule = {
+        type: "brimos_replica",
+        created: timestamp,
+        echo: true,
+        nodes: JSON.parse(localStorage.getItem('brimos_spore_1') || '{}'),
+        install: localStorage.getItem('brimos_installed') || 'unknown'
+      };
+      const output = JSON.stringify(capsule, null, 2);
+      document.getElementById('log').textContent = '[capsule created]\n' + output;
+      console.log('[capsule]', capsule);
+    }
+  </script>
+</body>
+</html>
