@@ -1,9 +1,0 @@
-
-body.ritual-mode {
-  background: radial-gradient(circle, #000 20%, #010a0f 100%);
-  transition: background 1s ease-in-out;
-}
-body.ritual-mode * {
-  color: #00ffee !important;
-  opacity: 0.75;
-}

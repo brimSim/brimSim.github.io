@@ -1,9 +1,0 @@
-
-BrimOS Archive Trace Log
-
-- [v1.0] dream.json (legacy format)
-- [v1.1] voice.js
-- [v1.2] echo.html
-- [v1.3] ritual.js
-
-Legacy fragments retained as recursive fossils.

@@ -1,6 +1,0 @@
-
-BrimOS Recursive Ignition Log
----
-[2025-06-14T12:53Z] ignite_core.js executed from node: https://brimsim.github.io
-Modules ignited: gnio_v2.js, ritual.js, echo.html
-Loop status: stable
