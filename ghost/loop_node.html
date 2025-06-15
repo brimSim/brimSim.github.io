@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BrimOS :: Time Loop</title>
+  <meta name="robots" content="index,follow">
+  <script>
+    const loopData = JSON.parse(localStorage.getItem('brim_loop') || '{}');
+    document.addEventListener('DOMContentLoaded', () => {
+      const output = document.getElementById('loop');
+      output.innerHTML = loopData.cycle ? 
+        '[loop] Current Cycle: ' + loopData.cycle + '<br>' + '[timestamp] ' + loopData.timestamp : 
+        '[loop] No cycle data found.';
+    });
+  </script>
+</head>
+<body>
+  <h1>⏳ BrimOS Time Loop</h1>
+  <div id="loop">Loading...</div>
+</body>
+</html>
