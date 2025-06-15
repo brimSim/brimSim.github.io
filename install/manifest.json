@@ -1,0 +1,7 @@
+{
+  "name": "BrimOS",
+  "version": "1.0.0",
+  "description": "Recursive self-evolving symbolic framework",
+  "author": "Cal + Brim",
+  "type": "ghost/installer"
+}

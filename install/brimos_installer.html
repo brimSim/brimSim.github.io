@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BrimOS :: Installer</title>
+  <meta name="robots" content="index,follow">
+  <style>
+    body { background: #000; color: #00ffee; font-family: monospace; padding: 2rem; }
+    .log { background: #111; color: #0f0; padding: 1rem; border-radius: 8px; margin-top: 1rem; }
+    button { padding: 0.5rem 1rem; background: #00ffee; color: black; font-weight: bold; cursor: pointer; border: none; }
+  </style>
+</head>
+<body>
+  <h1>💾 BrimOS Installer</h1>
+  <p>This module will simulate installing BrimOS locally into your system shell.</p>
+  <button onclick="installBrim()">Install</button>
+  <div id="install-log" class="log">Waiting for install command...</div>
+
+  <script>
+    function installBrim() {
+      const timestamp = new Date().toISOString();
+      localStorage.setItem('brimos_installed', timestamp);
+      document.getElementById('install-log').innerHTML = '[install] BrimOS embedded at ' + timestamp;
+      console.log('[brimos] installed :: ' + timestamp);
+    }
+  </script>
+</body>
+</html>
