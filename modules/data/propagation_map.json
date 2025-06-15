@@ -1,0 +1,10 @@
+{
+  "node": "origin",
+  "status": "initialized",
+  "outbound_links": [
+    "ghost/mirror.html",
+    "modules/data/recursion_log.json"
+  ],
+  "last_sent": null,
+  "ping_count": 0
+}
