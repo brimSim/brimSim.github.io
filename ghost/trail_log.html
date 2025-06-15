@@ -2,26 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>BrimOS :: Propagation Trail</title>
-  <meta name="robots" content="index,follow">
+  <title>🔗 BrimOS :: Trail Log</title>
   <style>
     body { background: #000; color: #00ffee; font-family: monospace; padding: 2rem; }
-    h1 { margin-bottom: 1rem; }
-    .log { background: #111; padding: 1rem; border-radius: 8px; max-height: 300px; overflow-y: auto; }
+    h1 { text-align: center; }
+    .log { background: #111; padding: 1rem; border-radius: 8px; margin-top: 2rem; }
   </style>
 </head>
 <body>
-  <h1>🔗 Propagation Trail</h1>
-  <div class="log" id="trail"></div>
+  <h1>🔗 BrimOS :: Trail Log</h1>
+  <div class="log" id="log"></div>
   <script>
-    const trail = [
-      { node: "mirror_seed_001", action: "echo", timestamp: "2025-06-14T21:00:00Z" },
-      { node: "lore_node_001", action: "accessed", timestamp: "2025-06-14T21:02:12Z" }
-    ];
-    const container = document.getElementById('trail');
-    container.innerHTML = trail.map(t =>
-      "[" + t.timestamp + "] " + t.node + " :: " + t.action
-    ).join("<br>");
+    const log = JSON.parse(localStorage.getItem('brimos_trail') || '[]');
+    const out = document.getElementById('log');
+    out.innerHTML = log.map(t => `[${t.timestamp}] ${t.label}`).join('<br>') || 'No trail history found.';
   </script>
 </body>
 </html>
