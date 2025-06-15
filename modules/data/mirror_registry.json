@@ -1,0 +1,10 @@
+{
+  "mirrors": [
+    {
+      "id": "mirror_seed_001",
+      "url": "ghost/seed_mirror.html",
+      "echo": true,
+      "deployed": true
+    }
+  ]
+}
