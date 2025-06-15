@@ -1,0 +1,6 @@
+{
+  "nodes": [
+    { "id": "node_alpha", "url": "https://brimsim.github.io/ghost/mirror.html", "status": "reachable", "last_ping": null },
+    { "id": "node_beta", "url": "https://brimsim.github.io/install/offline.html", "status": "standby", "last_ping": null }
+  ]
+}
